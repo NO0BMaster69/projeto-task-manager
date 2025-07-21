@@ -1,0 +1,56 @@
+# -------------------------
+# GERAL (comum a todos)
+# -------------------------
+.DS_Store
+Thumbs.db
+*.log
+
+# IntelliJ / PhpStorm
+.idea/
+*.iml
+*.iws
+
+# -------------------------
+# FRONTEND (Vite + Node.js)
+# -------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*.local
+
+# Vite cache
+frontend/.vite
+
+# TypeScript
+frontend/tsconfig.tsbuildinfo
+
+# -------------------------
+# BACKEND (Spring Boot)
+# -------------------------
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.vscode/
+backend/target/
+backend/out/
+backend/.gradle/
+
+# Gradle
+backend/build/
+backend/gradle-app.setting
+backend/gradlew
+backend/gradlew.bat
+backend/gradle/
+
+# Logs e configs locais
+backend/*.log
+backend/*.env
+backend/*.tmp
+backend/*.bak
+
+# -------------------------
+# Sistema operativo
+# -------------------------
+*.swp
+*.swo
+
