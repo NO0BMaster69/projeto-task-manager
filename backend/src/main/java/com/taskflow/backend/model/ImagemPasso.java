@@ -1,8 +1,14 @@
 package com.taskflow.backend.model;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name = "imagem_passo")
 public class ImagemPasso {
 
@@ -17,9 +23,5 @@ public class ImagemPasso {
     @ManyToOne
     @JoinColumn(name = "passo_id", nullable = false)
     private PassoDescricaoTarefa passo;
-
-    public ImagemPasso() {}
-
-    // Getters e setters omitidos por brevidade
 }
 

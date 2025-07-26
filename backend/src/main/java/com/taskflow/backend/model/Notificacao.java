@@ -2,8 +2,14 @@ package com.taskflow.backend.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name = "notificacao")
 public class Notificacao {
 
@@ -35,9 +41,5 @@ public class Notificacao {
         ALERTA,
         AVISO
     }
-
-    public Notificacao() {}
-
-    // Getters e setters omitidos por brevidade
 }
 

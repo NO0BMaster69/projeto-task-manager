@@ -1,8 +1,14 @@
 package com.taskflow.backend.model;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name = "user_equipa")
 public class UserEquipa {
 
@@ -25,13 +31,9 @@ public class UserEquipa {
     @Column(nullable = false)
     private Role role;
 
-    public UserEquipa() {}
-
     public enum Role {
         ADMIN,
         MEMBER
     }
-
-    // Getters e setters omitidos por brevidade
 }
 
