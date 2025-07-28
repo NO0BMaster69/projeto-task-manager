@@ -2,8 +2,14 @@ package com.taskflow.backend.model;
 
 import jakarta.persistence.*;
 import java.util.List;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name = "users") // evita conflito com "user" reservado em algumas bases de dados
 public class User {
 
@@ -30,10 +36,5 @@ public class User {
     // Relação com NotaTarefa
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<NotaTarefa> notasCriadas;
-
-    // Getters e Setters (podes gerar com o IDE)
-    public User() {}
-
-    // Construtor, Getters e Setters omitidos por brevidade
 }
 

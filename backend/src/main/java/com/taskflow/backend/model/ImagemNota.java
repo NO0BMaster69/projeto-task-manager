@@ -1,8 +1,14 @@
 package com.taskflow.backend.model;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name = "imagem_nota")
 public class ImagemNota {
 
@@ -17,9 +23,5 @@ public class ImagemNota {
     @ManyToOne
     @JoinColumn(name = "nota_id", nullable = false)
     private NotaTarefa nota;
-
-    public ImagemNota() {}
-
-    // Getters e setters omitidos por brevidade
 }
 

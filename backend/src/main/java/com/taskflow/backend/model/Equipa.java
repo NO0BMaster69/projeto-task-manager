@@ -1,9 +1,15 @@
 package com.taskflow.backend.model;
 
 import jakarta.persistence.*;
+import lombok.*;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name = "equipa")
 public class Equipa {
 
@@ -24,8 +30,5 @@ public class Equipa {
     @OneToMany(mappedBy = "equipa", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Tarefa> tarefas;
 
-    public Equipa() {}
-
-    // Construtor, Getters e Setters omitidos por brevidade
 }
 

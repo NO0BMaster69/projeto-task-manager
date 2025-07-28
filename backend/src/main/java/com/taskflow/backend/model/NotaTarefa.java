@@ -3,8 +3,14 @@ package com.taskflow.backend.model;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name = "nota_tarefa")
 public class NotaTarefa {
 
@@ -31,8 +37,5 @@ public class NotaTarefa {
     @OneToMany(mappedBy = "nota", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ImagemNota> imagens;
 
-    public NotaTarefa() {}
-
-    // Getters e setters omitidos por brevidade
 }
 

@@ -2,8 +2,14 @@ package com.taskflow.backend.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name = "tarefa_user")
 public class TarefaUser {
 
@@ -32,8 +38,4 @@ public class TarefaUser {
         EM_PROGRESO,
         CONCLUIDA
     }
-
-    public TarefaUser() {}
-
-    // Getters e setters omitidos por brevidade
 }

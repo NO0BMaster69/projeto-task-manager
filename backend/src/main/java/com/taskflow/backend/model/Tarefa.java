@@ -3,8 +3,14 @@ package com.taskflow.backend.model;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name = "tarefa")
 public class Tarefa {
 
@@ -50,9 +56,5 @@ public class Tarefa {
         MEDIA,
         ALTA
     }
-
-    public Tarefa() {}
-
-    // Getters e Setters omitidos por brevidade
 }
 

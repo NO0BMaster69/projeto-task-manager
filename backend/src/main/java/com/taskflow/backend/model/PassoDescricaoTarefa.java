@@ -2,8 +2,14 @@ package com.taskflow.backend.model;
 
 import jakarta.persistence.*;
 import java.util.List;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name = "passo_descricao_tarefa")
 public class PassoDescricaoTarefa {
 
@@ -26,9 +32,5 @@ public class PassoDescricaoTarefa {
     // Imagens associadas ao passo
     @OneToMany(mappedBy = "passo", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ImagemPasso> imagens;
-
-    public PassoDescricaoTarefa() {}
-
-    // Getters e setters omitidos por brevidade
 }
 
