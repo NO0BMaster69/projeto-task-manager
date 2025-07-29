@@ -10,6 +10,7 @@ import  {updateProfile} from 'firebase/auth'
 import { setDoc, doc} from 'firebase/firestore'
 import { useNavigate } from "react-router-dom"
 
+
 export default function RegisterPage() {
 
     const [formData, setFormData] = useState({

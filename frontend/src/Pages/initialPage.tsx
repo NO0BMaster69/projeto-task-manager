@@ -1,11 +1,12 @@
-import { auth } from "../Services/FireBaseConfig"
+import {useAuth} from '../Context/AuthContext'
 import { signOut } from "firebase/auth"
 import { useNavigate } from "react-router-dom"
+import { auth } from "../Services/FireBaseConfig"
 
 function initialPage(){
 
     const navigate = useNavigate()
-    const user = auth.currentUser;
+    const user = useAuth();
 
     const handleLogout = async () => {
         try{
@@ -19,15 +20,8 @@ function initialPage(){
 
     return(
         <div>
-            {user ? (
-                <div>
-                    <h1>Ola, {user.displayName}</h1>
-                    <button onClick={handleLogout}>Logout</button>
-                </div>
-            ): (
-                <p>A carregar utilizador</p>
-            )}
-
+            <h1>Ola, {user?.displayName}</h1>
+            <button onClick={handleLogout}>Logout</button>
         </div>
     )
 }

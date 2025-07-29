@@ -8,6 +8,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 import {auth} from '../Services/FireBaseConfig.tsx'
 
 
+
 export default function LoginPage() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
